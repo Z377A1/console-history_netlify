@@ -1,7 +1,14 @@
 .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: auto;
     max-width: 500px;
     font-family: sans-serif;
+  }
+
+  main {
+    flex-grow: 1;
   }
   
   .heading {
@@ -24,4 +31,10 @@
     color: gray;
     font-weight: 700;
     margin: 3rem 0;
+  }
+
+  footer {
+    background-color: #333; /* Set your desired background color */
+    color: #fff; /* Set your desired text color */
+    padding: 10px;
   }

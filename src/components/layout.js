@@ -36,6 +36,9 @@ const Layout = ({ pageTitle, children }) => {
                 <h1 className={heading}>{pageTitle}</h1>
                 {children}
             </main>
+            <footer>
+                This is the footer content. Loads console pages on netlify but not on local for some reason.
+            </footer>
         </div>
     )
 }
