@@ -3,8 +3,11 @@
  */
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.historyofconsoles.com`,
     title: "History of Consoles",
+    description: `Example project for the Gatsby Head API`,
+    twitterUsername: `@ZettaiDao`,
+    image: `./static/favicon.png`,
+    siteUrl: `https://www.historyofconsoles.com`,
   },
   plugins: [
     "gatsby-plugin-image",

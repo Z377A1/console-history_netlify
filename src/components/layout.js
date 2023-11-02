@@ -5,12 +5,14 @@ import {
     heading,
     navLinks,
     navLinkItem,
-    navLinkText
-  } from './layout.module.css'
+    navLinkText,
+} from './layout.module.css'
+import Seo from './seo'
 
 const Layout = ({ pageTitle, children }) => {
     return (
         <div className={container}>
+            <Seo header="" />
             <nav>
                 <ul className={navLinks}>
                     <li className={navLinkItem}>
