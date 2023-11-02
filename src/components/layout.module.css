@@ -38,3 +38,12 @@
     color: #fff; /* Set your desired text color */
     padding: 10px;
   }
+
+  /* Centered footer */
+  .centered-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+  }
