@@ -14,7 +14,7 @@ const ConsoleTimeline = ({ data }) => {
                 {node.frontmatter.title}
               </Link>
             </h2>
-            <p>Posted: {node.frontmatter.date}</p>
+            <p>Released: {node.frontmatter.date}</p>
           </article>
         ))
       }
