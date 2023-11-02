@@ -1,4 +1,8 @@
 <p align="center">
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/7c9995f4-9968-455c-b057-f634e7eff35b/deploy-status)](https://app.netlify.com/sites/console-history/deploys)
+</p>
+
+<p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
   </a>
