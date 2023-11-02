@@ -10,7 +10,7 @@
   "scripts": {
     "develop:optimize": "node scripts/optimize.js && gatsby develop",
     "start": "gatsby develop",
-    "build:optimize": "node scripts/optimize.js && gatsby build",
+    "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
