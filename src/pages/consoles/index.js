@@ -3,14 +3,14 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
 
-const BlogPage = ({ data }) => {
+const ConsoleTimeline = ({ data }) => {
   return (
-    <Layout pageTitle="My Blog Posts">
+    <Layout pageTitle="Timeline (Xbx/Ps)">
       {
         data.allMdx.nodes.map((node) => (
           <article key={node.id}>
             <h2>
-              <Link to={`/blog/${node.frontmatter.slug}`}>
+              <Link to={`/consoles/${node.frontmatter.slug}`}>
                 {node.frontmatter.title}
               </Link>
             </h2>
@@ -37,6 +37,6 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <Seo title="My Blog Posts" />
+export const Head = () => <Seo title="Console Timeline" />
 
-export default BlogPage
+export default ConsoleTimeline
