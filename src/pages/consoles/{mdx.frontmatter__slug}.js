@@ -18,7 +18,7 @@ const Console = ({ data, children }) => {
       />
       <p>
         Photo Credit:{" "}
-        <a href={data.mdx.frontmatter.hero_image_credit_link}>
+        <a href={data.mdx.frontmatter.hero_image_credit_link} target="_blank" rel="noopener noreferrer">
           {data.mdx.frontmatter.hero_image_credit_text}
         </a>
       </p>

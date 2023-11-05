@@ -14,7 +14,7 @@ const IndexPage = () => {
       />
       <p>
         Photo Credit:{" "}
-        <a href="https://unsplash.com/photos/white-nintendo-game-boy-lUbIun4IL38">
+        <a href="https://unsplash.com/photos/white-nintendo-game-boy-lUbIun4IL38" target="_blank" rel="noopener noreferrer">
           Nik
         </a>
       </p>
