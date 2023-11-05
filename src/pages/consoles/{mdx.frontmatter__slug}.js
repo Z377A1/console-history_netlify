@@ -5,7 +5,7 @@ import Layout from '../../components/layout'
 import Seo from '../../components/seo'
 
 const Console = ({ data, children }) => {
-  const image = getImage(data.mdx.frontmatter.hero_image)
+  const heroImage = getImage(data.mdx.frontmatter.hero_image)
 
   // const released = data.mdx.frontmatter.date ; // add released or will release logic
 
@@ -13,16 +13,46 @@ const Console = ({ data, children }) => {
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <p>Released on {data.mdx.frontmatter.date}</p>
       <GatsbyImage
-        image={image}
+        image={heroImage}
         alt={data.mdx.frontmatter.hero_image_alt}
       />
       <p>
         Photo Credit:{" "}
-        <a href={data.mdx.frontmatter.hero_image_credit_link} target="_blank" rel="noopener noreferrer">
+        <a href={data.mdx.frontmatter.hero_image_credit_link} target="_blank" rel="noreferrer">
           {data.mdx.frontmatter.hero_image_credit_text}
         </a>
       </p>
       {children}
+      {data.mdx.frontmatter.additional_images && data.mdx.frontmatter.additional_images.length > 0 && (
+        <div>
+          <p>Gallery</p>
+          {data.mdx.frontmatter.additional_images.map((image, index) => (
+            <ul>
+              {image.image != null ? (
+                <div>
+                  <li key={index}>
+                    <p>{image.alt}</p>
+                    <GatsbyImage
+                      image={getImage(image.image)}
+                      alt={image.alt}
+                    />
+                    <p>
+                      Photo Credit:{" "}
+                      <a href={image.credit_link} target="_blank" rel="noreferrer">
+                        {image.credit_text}
+                      </a>
+                    </p>
+                  </li>
+                </div>
+              ) : (
+                <div>
+                  <p>There is nothing here.</p>
+                </div>
+              )}
+            </ul>
+          ))}
+        </div>
+      )}
     </Layout>
   )
 }

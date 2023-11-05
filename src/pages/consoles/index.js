@@ -31,7 +31,7 @@ const ConsoleTimeline = ({ data }) => {
         ))
       }
       <p className={bottomUpStart}>
-        Starts from the 32-bit era, the fifth generation. Includes home video consoles only (See <a href="https://en.wikipedia.org/wiki/Home_video_game_console_generations" target="_blank">here</a>).
+        Starts from the 32-bit era, the fifth generation. Includes <a href="https://en.wikipedia.org/wiki/Home_video_game_console_generations" target="_blank" rel="noreferrer">home video consoles</a> only.
       </p>
     </Layout>
   )
