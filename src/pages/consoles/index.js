@@ -11,7 +11,7 @@ import Seo from '../../components/seo'
 
 const ConsoleTimeline = ({ data }) => {
   return (
-    <Layout pageTitle="Timeline (Xbx/Ps)">
+    <Layout pageTitle="Console History Timeline">
       {
         data.allMdx.nodes.map((node) => (
           <article key={node.id}>

@@ -23,36 +23,10 @@ const Console = ({ data, children }) => {
         </a>
       </p>
       {children}
-      {data.mdx.frontmatter.additional_images && data.mdx.frontmatter.additional_images.length > 0 && (
-        <div>
-          <p>Gallery</p>
-          {data.mdx.frontmatter.additional_images.map((image, index) => (
-            <ul>
-              {image.image != null ? (
-                <div>
-                  <li key={index}>
-                    <p>{image.alt}</p>
-                    <GatsbyImage
-                      image={getImage(image.image)}
-                      alt={image.alt}
-                    />
-                    <p>
-                      Photo Credit:{" "}
-                      <a href={image.credit_link} target="_blank" rel="noreferrer">
-                        {image.credit_text}
-                      </a>
-                    </p>
-                  </li>
-                </div>
-              ) : (
-                <div>
-                  <p>There is nothing here.</p>
-                </div>
-              )}
-            </ul>
-          ))}
-        </div>
-      )}
+      <div>
+        <p>Gallery</p>
+        {/* IMPLEMENT GALLERY LATER, BROKE THE SYSTEM WHEN I TRIED */}
+      </div>
     </Layout>
   )
 }
