@@ -1,7 +1,4 @@
 import * as React from 'react'
-import {
-    siteTitle,
-} from './layout.module.css'
 import useSiteMetadata from '../hooks/useSiteMetaData'
 
 const Seo = ({ title, description, pathname, children }) => {
@@ -18,7 +15,7 @@ const Seo = ({ title, description, pathname, children }) => {
     return (
         <>
             <title>{title} | {defaultTitle} - Video Gaming Consoles Through The Ages</title>
-            <header className={siteTitle}>{defaultTitle}</header>
+            <header>{defaultTitle}</header>
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
             <meta name="twitter:card" content="summary_large_image" />

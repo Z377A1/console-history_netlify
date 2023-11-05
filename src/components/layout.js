@@ -7,15 +7,20 @@ import {
     navLinkItem,
     navLinkText,
     centeredFooter,
+    siteTitle,
+    footerContent,
 } from './layout.module.css'
 import Seo from './seo'
 
 const Layout = ({ pageTitle, children }) => {
+    const yearOfCreation = 2023;
     const currentYear = new Date().getFullYear();
 
     return (
         <div className={container}>
-            <Seo header="" />
+            <Link to="/" className={siteTitle}>
+                <Seo header="" />
+            </Link>
             <nav>
                 <ul className={navLinks}>
                     <li className={navLinkItem}>
@@ -40,8 +45,10 @@ const Layout = ({ pageTitle, children }) => {
                 {children}
             </main>
             <footer className={`footer ${centeredFooter}`}>
-                <p>This is the footer content. Loads console pages on netlify but not on local for some reason.</p>
-                <p>&copy; The History of Consoles {currentYear}</p>
+                <div className={footerContent}>
+                    <p>This is the footer content. Used to load console pages on netlify but not on local for some reason. All grand now.</p>
+                </div>
+                <p>&copy; {yearOfCreation} - {currentYear} The History of Consoles</p>
             </footer>
         </div>
     )

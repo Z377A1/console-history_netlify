@@ -1,5 +1,11 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import {
+  containerBox,
+  tileLink,
+  bottomUpStart,
+} from '../../components/layout.module.css'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
 
@@ -9,15 +15,24 @@ const ConsoleTimeline = ({ data }) => {
       {
         data.allMdx.nodes.map((node) => (
           <article key={node.id}>
-            <h2>
-              <Link to={`/consoles/${node.frontmatter.slug}`}>
-                {node.frontmatter.title}
-              </Link>
-            </h2>
-            <p>Released: {node.frontmatter.date}</p>
+            <Link to={`/consoles/${node.frontmatter.slug}`} className={tileLink}>
+              <div className={containerBox}>
+                <h2>
+                  {node.frontmatter.title}
+                </h2>
+                <p>Released: {node.frontmatter.date}</p>
+                <GatsbyImage
+                  image={getImage(node.frontmatter.hero_image)}
+                  alt={node.frontmatter.hero_image_alt}
+                />
+              </div>
+            </Link>
           </article>
         ))
       }
+      <p className={bottomUpStart}>
+        Starts here.
+      </p>
     </Layout>
   )
 }
@@ -30,6 +45,11 @@ export const query = graphql`
           date(formatString: "D MMMM, YYYY")
           title
           slug
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         id
       }
