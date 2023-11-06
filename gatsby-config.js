@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: "History of Consoles",
-    description: `Example project for the Gatsby Head API`,
+    title: "The History of Consoles",
+    description: `The History of vido gaming consoles by release. Home video game consoles only.`,
     twitterUsername: `@ZettaiDao`,
     image: `./static/favicon.png`, // does not show
     siteUrl: `https://www.historyofconsoles.com`,
